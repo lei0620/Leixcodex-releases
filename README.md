@@ -1,24 +1,32 @@
-# OpenClaw Codex Releases
+# Leixcodex Releases
 
-This public repository contains **binary release assets only** for OpenClaw Codex clients.
-The application source code is maintained in a separate private repository and is not published here.
+This public repository contains the official Android and Windows binary releases for Leixcodex.
 
-## Latest stable release: v1.9.34
+## Latest stable release: v1.9.42
 
-Download only from the [v1.9.34 Release](https://github.com/lei0620/openclaw-codex-releases/releases/tag/v1.9.34):
+Download only from the [v1.9.42 Release](https://github.com/lei0620/Leixcodex-releases/releases/tag/v1.9.42):
 
-- Windows: `OpenClaw-Codex-1.9.34-Setup.exe`
-- Android: `OpenClaw-Codex-1.9.34.apk`
+- Android: `Leixcodex-v1.9.42-82-android.apk`
+- Windows: `Leixcodex-v1.9.42-windows-x64-setup.exe`
 - Checksums: `SHA256SUMS.txt`
 
-### Android first production-signed release
+v1.9.42 fixes public Windows installs that treated folders under `C:\Users\<username>` as projects. It now discovers the real Codex project catalog with no manual configuration, restores the matching desktop conversations, and migrates the affected v1.9.41 configuration during an in-place upgrade.
 
-Historical Android development builds used a debug certificate and cannot be upgraded in place to v1.9.34. Save the computer address, connection, and pairing information first; then uninstall the old debug app yourself, install the production APK, and pair again. The release process does not uninstall or operate apps on user phones.
+### Android signing
+
+The Android APK uses the long-term production signing certificate and package name `com.aixm.leixcodex`. Users already running the production-signed app can update in place.
 
 ### Windows publisher warning
 
-The v1.9.34 Windows installer is **not Authenticode-signed**. Windows may show “Unknown publisher” or a Microsoft Defender SmartScreen warning. Download it only from this repository and verify its SHA-256 before running it.
+The Windows installer is signed with the `CtrlGJump Local Code Signing` certificate and a DigiCert timestamp. Because this is not a public commercial CA certificate, computers that do not trust it may still show SmartScreen, Smart App Control, or an unknown-publisher warning.
 
 ### Verify SHA-256
 
-Download `SHA256SUMS.txt` from the same Release. In PowerShell, run `Get-FileHash .\OpenClaw-Codex-1.9.34-Setup.exe -Algorithm SHA256` or `Get-FileHash .\OpenClaw-Codex-1.9.34.apk -Algorithm SHA256`, then compare the result with the matching line in the checksum file.
+Download `SHA256SUMS.txt` from the same Release. In PowerShell, run:
+
+```powershell
+Get-FileHash .\Leixcodex-v1.9.42-82-android.apk -Algorithm SHA256
+Get-FileHash .\Leixcodex-v1.9.42-windows-x64-setup.exe -Algorithm SHA256
+```
+
+Compare the results with the matching entries in `SHA256SUMS.txt` before installation.
