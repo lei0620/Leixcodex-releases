@@ -1,6 +1,7 @@
 # Leixcodex Releases
 
 This public repository contains the official Android and Windows binary releases for Leixcodex.
+
 源码链接：https://1823039556.share.123pan.cn/123pan/cifwjv-ZgQ4d
 
 ## Latest stable release: v1.9.42
