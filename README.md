@@ -2,15 +2,16 @@
 
 This public repository contains the official Android and Windows binary releases for Leixcodex.
 
-## Latest stable release: v1.9.42
+## Latest stable release: v1.9.45
 
-Download only from the [v1.9.42 Release](https://github.com/lei0620/Leixcodex-releases/releases/tag/v1.9.42):
+Download only from the [v1.9.45 Release](https://github.com/lei0620/Leixcodex-releases/releases/tag/v1.9.45):
 
-- Android: `Leixcodex-v1.9.42-82-android.apk`
-- Windows: `Leixcodex-v1.9.42-windows-x64-setup.exe`
+- Android: `Leixcodex-v1.9.45-85-android.apk`
+- Windows: `Leixcodex-v1.9.45-windows-x64-setup.exe`
+- Update manifests: `android-update.json` and `windows-update.json`
 - Checksums: `SHA256SUMS.txt`
 
-v1.9.42 fixes public Windows installs that treated folders under `C:\Users\<username>` as projects. It now discovers the real Codex project catalog with no manual configuration, restores the matching desktop conversations, and migrates the affected v1.9.41 configuration during an in-place upgrade.
+v1.9.45 adds a floating light Liquid Glass composer, photo uploads, native plan mode, and phone answers to desktop Codex questions. Android and Windows should be updated together.
 
 ### Android signing
 
@@ -25,8 +26,8 @@ The Windows installer is signed with the `CtrlGJump Local Code Signing` certific
 Download `SHA256SUMS.txt` from the same Release. In PowerShell, run:
 
 ```powershell
-Get-FileHash .\Leixcodex-v1.9.42-82-android.apk -Algorithm SHA256
-Get-FileHash .\Leixcodex-v1.9.42-windows-x64-setup.exe -Algorithm SHA256
+Get-FileHash .\Leixcodex-v1.9.45-85-android.apk -Algorithm SHA256
+Get-FileHash .\Leixcodex-v1.9.45-windows-x64-setup.exe -Algorithm SHA256
 ```
 
 Compare the results with the matching entries in `SHA256SUMS.txt` before installation.
