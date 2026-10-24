@@ -7,8 +7,11 @@ Each complete release contains:
 - `Leixcodex-vMAJOR.MINOR.PATCH-VERSION_CODE-android.apk`
 - `Leixcodex-vMAJOR.MINOR.PATCH-windows-x64-setup.exe`
 - `android-update.json`
+- `windows-update.json`
 - `SHA256SUMS.txt`
 
 Stable and prerelease channels use GitHub's release metadata. A release is created as a draft, validated after every asset is uploaded, and only then may it be published.
 
 `android-update.json` contains `versionCode`, `versionName`, `apkUrl`, `sha256`, `notes`, and `publishedAt`. The APK URL must point to the matching asset in the same GitHub Release.
+
+`windows-update.json` contains `versionName`, `installerUrl`, `sha256`, `notes`, and `publishedAt`. The installer URL must point to the matching asset in the same GitHub Release.
